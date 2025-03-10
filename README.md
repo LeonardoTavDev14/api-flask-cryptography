@@ -30,7 +30,7 @@
 
 ## **Configuration**
 
-* Repository clone:**
+* Repository clone:
 ```
 git clone <REPOSITORY_URL>
 cd <REPOSITORY_NAME>
