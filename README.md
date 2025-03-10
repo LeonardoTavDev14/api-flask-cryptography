@@ -1,129 +1,130 @@
 ---
 
 
-## **app/: Contém o código da aplicação Flask.**
+## **app/: Contains the Flask application code.
 
-### ***__init__.py: Inicializa a aplicação Flask.***
-### ***database.py: Gerencia a conexão com o banco de dados.***
-### ***models.py: Define os modelos de dados.***
-### ***routes.py: Define as rotas da API.***
-### ***utils.py: Contém funções utilitárias para criptografia e outras operações.***
-### ***.gitignore: Arquivo para ignorar arquivos no Git.***
-### ***config.py: Configurações da aplicação.***
-### ***README.md: Documentação do projeto.***
-### ***run.py: Script para iniciar a aplicação.***
-
-
----
-
-
-## **Tecnologias Utilizadas**
-### ***Flask: Framework web Python para criar a API.***
-### ***bcrypt: Biblioteca para criptografia de senhas.***
-### ***Cryptography: Biblioteca para criptografia de mensagens.***
-### ***Python: Linguagem de programação principal.***
-### ***dotenv: Para gerenciar variáveis de ambiente.***
+### ***__init__.py: Initializes the Flask application.***
+### ***database.py: Manages the connection to the database.***
+### ***models.py: Defines the data models.***
+### ***routes.py: Defines the API routes.***
+### ***utils.py: Contains utility functions for encryption and other operations.***
+### ***.gitignore: File for ignoring files in Git.***
+### ***config.py: Application settings.***
+### ***README.md: Project documentation.***
+### ***run.py: Script to start the application.***
 
 
 ---
 
-## **Configuração**
 
-*   **Clone do Repositório:**
+## **Technologies Used**
+### ***Flask: Python web framework to create the API.***
+### ***bcrypt: Password encryption library.***
+### ***Cryptography: Library for encrypting messages.***
+### ***Python: Main programming language.***
+### ***dotenv: To manage environment variables.***
+
+
+
+---
+
+## **Configuration**
+
+* Repository clone:**
 ```
-git clone <URL_DO_REPOSITÓRIO>
-cd <NOME_DO_REPOSITÓRIO>
+git clone <REPOSITORY_URL>
+cd <REPOSITORY_NAME>
 ```
-*   **Crie um ambiente virtual (opcional, mas recomendado):**
+* Create a virtual environment (optional, but recommended):**
 ```
 python3 -m venv venv
-source venv/bin/activate  # No Linux/macOS
-venv\Scripts\activate  # No Windows
+source venv/bin/activate # On Linux/macOS
+venv\Scripts\activate # On Windows
 ```
-*   **Instale as dependências:**
+**Install the dependencies:**
 ```
 pip install -r requirements.txt
 ```
-*   Configure as variáveis de ambiente:
-*   Crie um arquivo .env na raiz do projeto e adicione as seguintes variáveis:
+* Set the environment variables:
+* Create an .env file in the root of the project and add the following variables:
 ```
-SECRET_KEY=<SUA_CHAVE_SECRETA_DO_FLASK>
-DATABASE_URL=<URL_DO_SEU_BANCO_DE_DADOS>
+SECRET_KEY=<YOUR_FLASK_SECRET_KEY>
+DATABASE_URL=<YOUR_DATABASE_URL>
 ```
-*   Substitua <SUA_CHAVE_SECRETA_DO_FLASK> por uma chave secreta segura para o Flask e <URL_DO_SEU_BANCO_DE_DADOS> pela URL de conexão do seu banco de dados.
+* Replace <YOUR_FLASK_SECRET_KEY> with a secure secret key for Flask and <URL_YOUR_DATABASE> with your database connection URL.
 
 
 ---
-# **Executando a Aplicação**
-Para iniciar a aplicação, execute o seguinte comando:
+# Running the application
+To start the application, run the following command:
 ```
 python run.py
 ```
-A API estará disponível em http://127.0.0.1:5000/.
+The API will be available at http://127.0.0.1:5000/.
 
 
 ---
-## **Endpoints da API**
-**Criptografia de Mensagens**
-*   POST /encrypt: Criptografa uma mensagem.
-  *   Corpo da requisição:
+## **API Endpoints**
+**Message Encryption
+* POST /encrypt: Encrypts a message.
+  * Request body:
 ```
 {
-    "message": "mensagem a ser criptografada"
+    “message": ”message to be encrypted”
 }
 ```
-  *  Resposta:
+  * Response:
 ```
 {
-  "encrypted_message": "mensagem criptografada"
+  “encrypted_message": ”encrypted message”
 }
 ```
-*   POST /decrypt: Descriptografa uma mensagem.
-  *   Corpo da requisição:
+* POST /decrypt: Decrypts a message.
+  * Request body:
 ```
 {
-  "encrypted_message": "mensagem criptografada"
+  “encrypted_message": ”encrypted message”
 }
 ```
-  *  Resposta:
+  * Response:
 ```
 {
-  "message": "mensagem descriptografada"
+  “message": ”decrypted message”
 }
 ```
 
 
-**Criptografia de Senhas**
-*   POST /hash_password: Criptografa uma senha.
-  *   Corpo da requisição:
+**Password encryption
+* POST /hash_password: Encrypts a password.
+  * Request body:
 ```
 {
-  "password": "senha a ser criptografada"
+  “password": ”password to be encrypted”
 }
 ```
-  *  Resposta:
+  * Response:
 ```
 {
-  "hashed_password": "senha criptografada"
+  “hashed_password": ”encrypted password”
 }
 ```
-*   POST /verify_password: Verifica se uma senha corresponde a um hash.
-  *   Corpo da requisição:
+* POST /verify_password: Checks if a password matches a hash.
+  * Request body:
 ```
 {
-  "password": "senha a ser verificada",
-  "hashed_password": "senha criptografada"
+  “password": ‘password to be verified’,
+  “hashed_password": ”encrypted password”
 }
 ```
-  *  Resposta:
+  * Response:
 ```
 {
-  "result": true/false
+  “result": true/false
 }
 ```
 
 
 ---
 
-## **Contribuições**
-*   Professor Fabiano Menegidio
+## **Contributions**
+* Professor Fabiano Menegidio
