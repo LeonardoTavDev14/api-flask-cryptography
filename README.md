@@ -1,7 +1,7 @@
 ---
 
 
-## **app/: Contains the Flask application code.
+## **app/: Contains the Flask application code.**
 
 ### ***__init__.py: Initializes the Flask application.***
 ### ***database.py: Manages the connection to the database.***
